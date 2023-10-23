@@ -210,5 +210,44 @@
 			Submit
 		</button>
 	</form>
+
+    
+	<script>
+		document.getElementById('form').addEventListener('submit', function(event) {
+			// Prevent the default form submission behavior
+			event.preventDefault();
+
+			// Retrieve the values of the form elements
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var age = document.getElementById('age').value;
+			var role = document.getElementById('role').value;
+
+			// Get the selected recommendation
+			var recommendation = document.querySelector('input[name="recommed"]:checked').value;
+
+			// Get the selected languages/frameworks
+			var checkboxes = document.getElementsByName('inp');
+			var languages = [];
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].checked) {
+					languages.push(checkboxes[i].value);
+				}
+			}
+
+			var comment = document.getElementById('comment').value;
+
+			// Optionally, you can store these values or send them to a server
+			console.log('Name:', name);
+			console.log('Email:', email);
+			console.log('Age:', age);
+			console.log('Role:', role);
+			console.log('Recommendation:', recommendation);
+			console.log('Languages:', languages);
+			console.log('Comment:', comment);
+		});
+	</script>
+</body>
+</html>
 </body>
 </html>
