@@ -36,23 +36,23 @@
 		</div>
 		
 		<div class="form-control">
-			<label for="name" id="label-name">
-				Namn
-			</label>
-			<input type="text"
-				id="name"
-				name ="your-name"
-				placeholder="Enter your name" />
+				<label for="name" id="label-name">
+					Namn
+				</label>
+				<input type="text"
+					id="name"
+					name ="your-name"
+					placeholder="Enter your name" />
 		</div>
 
 		<div class="form-control">
-			<label for="email" id="label-email" >
-				Email
-			</label>
-			<input type="email"
-				id="email"
-				placeholder="Enter your email"
-				name = "your-email" />
+				<label for="email" id="label-email" >
+					Email
+				</label>
+				<input type="email"
+					id="email"
+					placeholder="Enter your email"
+					name = "your-email" />
 		</div>
 
 		<div class="form-control">
@@ -95,270 +95,297 @@
 		</div>
 		
 		<div class="form-control">
-			<label for="year_edu" id="label-year_edu">
-				Vilket år studerar du?
-			</label>
-            <select name="role" id="role" onchange="showInput()">
-				<option value="default">Välj år</option>
-				<option value="year-1">År 1</option>
-				<option value="year-2">År 2</option>
-				<option value="year-3">År 3</option>
-				<option value="year-4">År 4</option>
-				<option value="year-5">År 5</option>
-            </select>
+			<form>
+				<label for="year_edu" id="label-year_edu">
+					Vilket år studerar du?
+				</label>
+				<select name="role" id="role" onchange="showInput()">
+					<option value="default">Välj år</option>
+					<option value="year-1">År 1</option>
+					<option value="year-2">År 2</option>
+					<option value="year-3">År 3</option>
+					<option value="year-4">År 4</option>
+					<option value="year-5">År 5</option>
+				</select>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 1: 3D-printer modell (<em>psst, du hittar en i montern</em>)
-			</label>
-		
-			<!-- Input Type Radio Button -->
-			<label for="printer-1">
-				<input type="radio" id="printer-1" name="3DPrinter" value="3DBenchy">
-				3DBenchy
-			</label>
-		
-			<label for="printer-2">
-				<input type="radio" id="printer-2" name="3DPrinter" value="3DBoaty">
-				3DBoaty
-			</label>
-		
-			<label for="printer-3">
-				<input type="radio" id="printer-3" name="3DPrinter" value="3DDucky">
-				3DDucky
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 1: 3D-printer modell (<em>psst, du hittar en i montern</em>)
+				</label>
+			
+				<!-- Input Type Radio Button -->
+				<label for="printer-1">
+					<input type="radio" id="printer-1" name="3DPrinter" value="3DBenchy">
+					3DBenchy
+				</label>
+			
+				<label for="printer-2">
+					<input type="radio" id="printer-2" name="3DPrinter" value="3DBoaty">
+					3DBoaty
+				</label>
+			
+				<label for="printer-3">
+					<input type="radio" id="printer-3" name="3DPrinter" value="3DDucky">
+					3DDucky
+				</label>
 
-			<label for="printer-4">
-				<input type="radio" id="printer-4" name="3DPrinter" value="3DRocky">
-				3DRocky
-			</label>
+				<label for="printer-4">
+					<input type="radio" id="printer-4" name="3DPrinter" value="3DRocky">
+					3DRocky
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 2: Vilken elektrisk komponent symboliserar denna symbol?
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 2: Vilken elektrisk komponent symboliserar denna symbol?
+				</label>
 
-			<img src="images/electricalsymbol.png" class="electricalsymbol">
-		
-			<!-- Input Type Radio Button -->
-			<label for="es-1">
-				<input type="radio" id="es-1" name="es" value="knapp">
-				Knapp
-			</label>
-		
-			<label for="es-2">
-				<input type="radio" id="es-2" name="es" value="skruvresistans">
-				Skruvresistans
-			</label>
-		
-			<label for="es-3">
-				<input type="radio" id="es-3" name="es" value="glödlampa">
-				Glödlampa
-			</label>
+				<img src="images/electricalsymbol.png" class="electricalsymbol">
+			
+				<!-- Input Type Radio Button -->
+				<label for="es-1">
+					<input type="radio" id="es-1" name="es" value="knapp">
+					Knapp
+				</label>
+			
+				<label for="es-2">
+					<input type="radio" id="es-2" name="es" value="skruvresistans">
+					Skruvresistans
+				</label>
+			
+				<label for="es-3">
+					<input type="radio" id="es-3" name="es" value="glödlampa">
+					Glödlampa
+				</label>
 
-			<label for="es-4">
-				<input type="radio" id="es-4" name="es" value="nödstopp">
-				Nödstopp
-			</label>
+				<label for="es-4">
+					<input type="radio" id="es-4" name="es" value="nödstopp">
+					Nödstopp
+				</label>
+			</form>
 
 
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 3: Vilket alternativ är <strong><em>inte</em></strong> ett programmeringsspråk?
-			</label>
-						<!-- Input Type Radio Button -->
-			<label for="ps-1">
-				<input type="radio" id="ps-1" name="ps" value="C++">
-				C++
-			</label>
-		
-			<label for="ps-2">
-				<input type="radio" id="ps-2" name="ps" value="C#">
-				C#
-			</label>
-		
-			<label for="ps-3">
-				<input type="radio" id="ps-3" name="ps" value="C-Shark">
-				C-Shark
-			</label>
+			<form> 
+				<label class="question-label">
+					Fråga 3: Vilket alternativ är <strong><em>inte</em></strong> ett programmeringsspråk?
+				</label>
+							<!-- Input Type Radio Button -->
+				<label for="ps-1">
+					<input type="radio" id="ps-1" name="ps" value="C++">
+					C++
+				</label>
+			
+				<label for="ps-2">
+					<input type="radio" id="ps-2" name="ps" value="C#">
+					C#
+				</label>
+			
+				<label for="ps-3">
+					<input type="radio" id="ps-3" name="ps" value="C-Shark">
+					C-Shark
+				</label>
 
-			<label for="ps-4">
-				<input type="radio" id="ps-4" name="ps" value="C">
-				C
-			</label>
+				<label for="ps-4">
+					<input type="radio" id="ps-4" name="ps" value="C">
+					C
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 4: Vilket alternativ är en integer?
-			</label>
-						<!-- Input Type Radio Button -->
-			<label for="int-1">
-				<input type="radio" id="int-1" name="int" value="C++">
-				9.2
-			</label>
-		
-			<label for="int-2">
-				<input type="radio" id="int-2" name="int" value="C#">
-				17
-			</label>
-		
-			<label for="int-3">
-				<input type="radio" id="int-3" name="int" value="C-Shark">
-				"xyz"
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 4: Vilket alternativ är en "integer"?
+				</label>
+							<!-- Input Type Radio Button -->
+				<label for="int-1">
+					<input type="radio" id="int-1" name="int" value="C++">
+					9.2
+				</label>
+			
+				<label for="int-2">
+					<input type="radio" id="int-2" name="int" value="C#">
+					17
+				</label>
+			
+				<label for="int-3">
+					<input type="radio" id="int-3" name="int" value="C-Shark">
+					"xyz"
+				</label>
 
-			<label for="int-4">
-				<input type="radio" id="int-4" name="int" value="C">
-				π
-			</label>
+				<label for="int-4">
+					<input type="radio" id="int-4" name="int" value="C">
+					π
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 5: Vilket av följande skruvhuvuden heter Phillips?
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 5: Vilket av följande skruvhuvuden heter Phillips?
+				</label>
 
-			<img src="images/4screwheads.png" class="screwheads">
-		
-			<!-- Input Type Radio Button -->
-			<label for="sh-1">
-				<input type="radio" id="sh-1" name="sh" value="n1">
-				Nummer 1
-			</label>
-		
-			<label for="sh-2">
-				<input type="radio" id="sh-2" name="sh" value="n2">
-				Nummer 2
-			</label>
-		
-			<label for="sh-3">
-				<input type="radio" id="sh-3" name="sh" value="n3">
-				Nummer 3
-			</label>
+				<img src="images/screwheads4_v2.png" class="screwheads">
+			
+				<!-- Input Type Radio Button -->
+				<label for="sh-1">
+					<input type="radio" id="sh-1" name="sh" value="n1">
+					A
+				</label>
+			
+				<label for="sh-2">
+					<input type="radio" id="sh-2" name="sh" value="n2">
+					B
+				</label>
+			
+				<label for="sh-3">
+					<input type="radio" id="sh-3" name="sh" value="n3">
+					C
+				</label>
 
-			<label for="sh-4">
-				<input type="radio" id="sh-4" name="sh" value="n4">
-				Nummer 4
-			</label>
+				<label for="sh-4">
+					<input type="radio" id="sh-4" name="sh" value="n4">
+					D
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 6: GMP är ett återkommande begrepp inom läkemedelsindustrin. Vad står förkortningen för?
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 6: GMP är ett återkommande begrepp inom läkemedelsindustrin. Vad står förkortningen för?
+				</label>
 
-			<!-- Input Type Radio Button -->
-			<label for="GMP-1">
-				<input type="radio" id="GMP-1" name="GMP" value="GMP1">
-				Gross Margin Profit
-			</label>
-		
-			<label for="GMP-2">
-				<input type="radio" id="GMP-2" name="GMP" value="GMP2">
-				Good Manufacturing Process
-			</label>
-		
-			<label for="GMP-3">
-				<input type="radio" id="GMP-3" name="GMP" value="GMP3">
-				Good Manufacturing Practice
-			</label>
+				<!-- Input Type Radio Button -->
+				<label for="GMP-1">
+					<input type="radio" id="GMP-1" name="GMP" value="GMP1">
+					Gross Margin Profit
+				</label>
+			
+				<label for="GMP-2">
+					<input type="radio" id="GMP-2" name="GMP" value="GMP2">
+					Good Manufacturing Process
+				</label>
+			
+				<label for="GMP-3">
+					<input type="radio" id="GMP-3" name="GMP" value="GMP3">
+					Good Manufacturing Practice
+				</label>
 
-			<label for="GMP-4">
-				<input type="radio" id="GMP-4" name="GMP" value="GMP4">
-				General Medical Procedure
-			</label>
+				<label for="GMP-4">
+					<input type="radio" id="GMP-4" name="GMP" value="GMP4">
+					General Medical Procedure
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 7: Nedan syns en kondensator, som karaktäriseras av sin kapacitans. Men i vilken enhet mäts kapacitans?
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 7: Nedan syns en kondensator, som karaktäriseras av sin kapacitans. Men i vilken enhet mäts kapacitans?
+				</label>
 
-			<img src="images/kondensator_rot.png" class="kondensator">
-		
-			<!-- Input Type Radio Button -->
-			<label for="kondensator-1">
-				<input type="radio" id="kondensator-1" name="kondensator" value="n1">
-				Henry
-			</label>
-		
-			<label for="kondensator-2">
-				<input type="radio" id="kondensator-2" name="kondensator" value="n2">
-				Farad
-			</label>
-		
-			<label for="kondensator-3">
-				<input type="radio" id="kondensator-3" name="kondensator" value="n3">
-				Ohm
-			</label>
+				<img src="images/kondensator_rot.png" class="kondensator">
+			
+				<!-- Input Type Radio Button -->
+				<label for="kondensator-1">
+					<input type="radio" id="kondensator-1" name="kondensator" value="n1">
+					Henry
+				</label>
+			
+				<label for="kondensator-2">
+					<input type="radio" id="kondensator-2" name="kondensator" value="n2">
+					Farad
+				</label>
+			
+				<label for="kondensator-3">
+					<input type="radio" id="kondensator-3" name="kondensator" value="n3">
+					Ohm
+				</label>
 
-			<label for="kondensator-4">
-				<input type="radio" id="kondensator-4" name="kondensator" value="n4">
-				Joule
-			</label>
+				<label for="kondensator-4">
+					<input type="radio" id="kondensator-4" name="kondensator" value="n4">
+					Joule
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 8: Vad kallas metoden som används av Cytiva, en av de viktigaste kunderna för Prevas i Uppsala, för att skilja olika molekyler i en blandning från varandra?
-			</label>
-		
-			<!-- Input Type Radio Button -->
-			<label for="kg-1">
-				<input type="radio" id="kg-1" name="kg" value="n1">
-				Kromatografi
-			</label>
-		
-			<label for="kg-2">
-				<input type="radio" id="kg-2" name="kg" value="n2">
-				Filtrering
-			</label>
-		
-			<label for="kg-3">
-				<input type="radio" id="kg-3" name="kg" value="n3">
-				Spektroskopi
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 8: Vad kallas metoden som används av Cytiva, en av de viktigaste kunderna för Prevas i Uppsala, för att skilja olika molekyler i en blandning från varandra?
+				</label>
+			
+				<!-- Input Type Radio Button -->
+				<label for="kg-1">
+					<input type="radio" id="kg-1" name="kg" value="n1">
+					Kromatografi
+				</label>
+			
+				<label for="kg-2">
+					<input type="radio" id="kg-2" name="kg" value="n2">
+					Filtrering
+				</label>
+			
+				<label for="kg-3">
+					<input type="radio" id="kg-3" name="kg" value="n3">
+					Spektroskopi
+				</label>
 
-			<label for="kg-4">
-				<input type="radio" id="kg-4" name="kg" value="n4">
-				Sublimation
-			</label>
+				<label for="kg-4">
+					<input type="radio" id="kg-4" name="kg" value="n4">
+					Sublimation
+				</label>
+			</form>
 		</div>
 
 		<div class="form-control">
-			<label>
-				Fråga 9: Vilken teknik används för att göra precisa genförändringar hos organismer? (<em>psst. Tekniken fick Nobelpriset i kemi 2020</em>)
-			</label>
-		
-			<!-- Input Type Radio Button -->
-			<label for="gf-1">
-				<input type="radio" id="gf-1" name="gf" value="n1">
-				RNA-sekvensering
-			</label>
-		
-			<label for="gf-2">
-				<input type="radio" id="gf-2" name="gf" value="n2">
-				GMO
-			</label>
-		
-			<label for="gf-3">
-				<input type="radio" id="gf-3" name="gf" value="n3">
-				CRISPR
-			</label>
+			<form>
+				<label class="question-label">
+					Fråga 9: Vilken teknik används för att göra precisa genförändringar hos organismer? (<em>psst. Tekniken fick Nobelpriset i kemi 2020</em>)
+				</label>
+			
+				<!-- Input Type Radio Button -->
+				<label for="gf-1">
+					<input type="radio" id="gf-1" name="gf" value="n1">
+					RNA-sekvensering
+				</label>
+			
+				<label for="gf-2">
+					<input type="radio" id="gf-2" name="gf" value="n2">
+					GMO
+				</label>
+			
+				<label for="gf-3">
+					<input type="radio" id="gf-3" name="gf" value="n3">
+					CRISPR
+				</label>
 
-			<label for="gf-4">
-				<input type="radio" id="gf-4" name="gf" value="n4">
-				PCR
-			</label>
+				<label for="gf-4">
+					<input type="radio" id="gf-4" name="gf" value="n4">
+					PCR
+				</label>
+				
+			</form>
 		</div>
-
-
+		<button type="button" onclick="submitForm()">Submit</button>
 
 	</form>
+
+	<script>
+		function submitForm() {
+			document.getElementById('form').submit();
+		}
+	</script>
+
 
 </body>
