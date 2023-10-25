@@ -1,0 +1,76 @@
+/* Styling the Body element i.e. Color, 
+Font, Alignment */ 
+body {
+    background-color: #54BFD1;
+    font-family: "Nunito Sans";
+    text-align: center;
+}
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px #4A4949;
+    
+}
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+/* Styling form-control Label */ 
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+/* Styling form-control input, 
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+.form-control select {
+    width: 100%;
+}
+
+/* Styling form-control Radio 
+button and Checkbox */
+.form-control input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+/* Styling Button */
+
+h1 {
+    color: #4A4949;
+  }
+
+.electricalsymbol {
+    width: 150px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto;
+}  
+
+.screwheads {
+    width: 450px; 
+    height: auto; 
+    display: block;
+    margin: auto;
+} 
+
+.kondensator {
+    width: 100; 
+    height: auto; 
+    display: block;
+    margin: auto;
+} 
