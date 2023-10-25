@@ -1,5 +1,13 @@
 /* Styling the Body element i.e. Color, 
 Font, Alignment */ 
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: white; /* Set your light mode background color */
+      color: black; /* Set your light mode text color */
+    }
+  }
+
 body {
     background-color: #54BFD1;
     font-family: "Nunito Sans";
