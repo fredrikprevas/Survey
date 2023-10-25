@@ -56,6 +56,7 @@ h1 {
 
 .electricalsymbol {
     width: 150px; /* Set the desired width */
+    max-width: 100%;
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin: auto;
@@ -63,6 +64,7 @@ h1 {
 
 .screwheads {
     width: 450px; 
+    max-width: 100%;
     height: auto; 
     display: block;
     margin: auto;
@@ -70,6 +72,7 @@ h1 {
 
 .kondensator {
     width: 100; 
+    max-width: 100%;
     height: auto; 
     display: block;
     margin: auto;
