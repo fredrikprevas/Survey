@@ -79,7 +79,7 @@ h1 {
 
 .prevashello {
     width: 300px; 
-    max-width: 500px;
+    max-width: 100%;
     height: auto; 
     display: block;
     margin: auto;
