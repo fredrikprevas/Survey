@@ -62,8 +62,7 @@ h1 {
     margin: auto;
 }  
 
-.screwheads {
-    width: 450px; 
+.screwheads { 
     max-width: 100%;
     height: auto; 
     display: block;
