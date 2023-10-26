@@ -93,3 +93,16 @@ h1 {
     display: block;
     margin: auto;
 } 
+
+.form-control button {
+    background-color: #21c244;
+    border: 2px solid #777;
+    border-radius: 10px;
+    font-family: inherit;
+    box-shadow: 3px 7px 15px #4A4949;
+    font-size: 21px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 250px;
+}
