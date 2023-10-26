@@ -96,13 +96,56 @@ h1 {
 
 button {
     background-color: #21c244;
-    border: 2px solid #777;
+    border: 1px solid #4A4949;
     border-radius: 10px;
     font-family: inherit;
-    box-shadow: 3px 7px 15px #4A4949;
+    box-shadow: 1px 1px 1px #4A4949;
     font-size: 21px;
     display: block;
     margin: auto;
     width: 100%;
     max-width: 250px;
 }
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #54BFD1; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    animation: spin 2s linear infinite;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 300px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    content: "\2713";
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 48px;
+    color: #54BFD1; /* Blue */
+  }
+
