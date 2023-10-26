@@ -11,26 +11,23 @@
 		Prevas På Utnarm
 	</title>
 
-    <script>
-        function showInput() {
-            var select = document.getElementById("role");
-            var input = document.getElementById("inputField");
-            var label = document.getElementById("label-role");
-
-            if (select.value == "Annan") {
-                input.style.display = "block";
-            } else {
-                input.style.display = "none";
-                label.style.display = "block"; // Optional: show label when input is hidden
-            }
-        }
-    </script>
-
 </head>
 
 
 <body>
 	<form method = "post" action="https://script.google.com/macros/s/AKfycbzD8-nBZ2m9lfTd0nMdmA9jbBUX_prt8XVWCKkHQuGOMx-6r8FCHXwxxocUNUAHWJNx/exec" id="form" name="contact-form">
+
+		<!-- Här samlas alla valda svar från frågorna i hiddens. blev fel annars då det är forms i formen. -->
+		<input type="hidden" id="3DPrinterQ" name="Fråga 1" value = "N/A">
+		<input type="hidden" id="SymbolQ" name="Fråga 2" value = "N/A">
+		<input type="hidden" id="ProgrammingLanguageQ" name="Fråga 3" value = "N/A">
+		<input type="hidden" id="IntegerQ" name="Fråga 4" value = "N/A">
+		<input type="hidden" id="ScrewheadQ" name="Fråga 5" value = "N/A">
+		<input type="hidden" id="GMPQ" name="Fråga 6" value = "N/A">
+		<input type="hidden" id="KapacitorQ" name="Fråga 7" value = "N/A">
+		<input type="hidden" id="CytivaQ" name="Fråga 8" value = "N/A">
+		<input type="hidden" id="gensaxQ" name="Fråga 9" value = "N/A">
+
 		<div class="form-control">
 			<img src="images/prevashello.png" class="prevashello">
 		</div>
@@ -41,7 +38,7 @@
 				</label>
 				<input type="text"
 					id="name"
-					name ="your-name"
+					name ="Namn"
 					placeholder="Enter your name" />
 		</div>
 
@@ -52,7 +49,7 @@
 				<input type="email"
 					id="email"
 					placeholder="Enter your email"
-					name = "your-email" />
+					name = "Email" />
 		</div>
 
 		<div class="form-control">
@@ -61,18 +58,18 @@
 			</label>
 			<input type="tel"
 				id="mobile"
-				name="your-mobile"
+				name="Telefonnummer"
 				placeholder="Enter your mobile number" />
 		</div>
 
 		<div class="form-control">
-            <label for="role" id="label-role">
+            <label for="Utbildning" id="Utbildning-linje">
                 Vilken linje studerar du?
             </label>
-             
+            
             <!-- Dropdown options -->
-            <select name="role" id="role" onchange="showInput()">
-				<option value="default">Välj linje</option>
+            <select name="Utbildning" id="Utbildning">
+				<option value="N/A">Välj linje</option>
                 <option value="Teknisk fysik">Teknisk fysik</option>
                 <option value="Teknisk fysik med materialvetenskap">Teknisk fysik med materialvetenskap</option>
                 <option value="System i teknik och samhälle">System i teknik och samhälle</option>
@@ -86,26 +83,20 @@
 				<option value="Annan">Annan</option>
             </select>
         </div>
-
-		<div class="form-control" id="inputField" style="display: none;">
-			<input type="text"
-				id="other-education"
-				name ="your-education-text"
-				placeholder="Enter your education" />
-		</div>
 		
 		<div class="form-control">
-			<form>
-				<label for="year_edu" id="label-year_edu">
+			<form >
+
+				<label for="År" id="label-År">
 					Vilket år studerar du?
 				</label>
-				<select name="role" id="role" onchange="showInput()">
-					<option value="default">Välj år</option>
-					<option value="year-1">År 1</option>
-					<option value="year-2">År 2</option>
-					<option value="year-3">År 3</option>
-					<option value="year-4">År 4</option>
-					<option value="year-5">År 5</option>
+				<select name="År" id="role">
+					<option value="N/A">Välj år</option>
+					<option value="1">År 1</option>
+					<option value="2">År 2</option>
+					<option value="3">År 3</option>
+					<option value="4">År 4</option>
+					<option value="5">År 5</option>
 				</select>
 			</form>
 		</div>
@@ -115,29 +106,30 @@
 				<label class="question-label">
 					Fråga 1: 3D-printer modell (<em>psst, du hittar en i montern</em>)
 				</label>
-			
+
 				<!-- Input Type Radio Button -->
-				<label for="printer-1">
+				<label for="printer-1" onclick="setSelectedRadio('3DPrinterQ', 'A')">
 					<input type="radio" id="printer-1" name="3DPrinter" value="3DBenchy">
 					3DBenchy
 				</label>
 			
-				<label for="printer-2">
+				<label for="printer-2" onclick="setSelectedRadio('3DPrinterQ', 'B')">
 					<input type="radio" id="printer-2" name="3DPrinter" value="3DBoaty">
 					3DBoaty
 				</label>
 			
-				<label for="printer-3">
+				<label for="printer-3" onclick="setSelectedRadio('3DPrinterQ', 'C')">
 					<input type="radio" id="printer-3" name="3DPrinter" value="3DDucky">
 					3DDucky
 				</label>
 
-				<label for="printer-4">
+				<label for="printer-4" onclick="setSelectedRadio('3DPrinterQ', 'D')">
 					<input type="radio" id="printer-4" name="3DPrinter" value="3DRocky">
 					3DRocky
 				</label>
 			</form>
 		</div>
+
 
 		<div class="form-control">
 			<form>
@@ -148,22 +140,22 @@
 				<img src="images/electricalsymbol.png" class="electricalsymbol">
 			
 				<!-- Input Type Radio Button -->
-				<label for="es-1">
+				<label for="es-1" onclick="setSelectedRadio('SymbolQ', 'A')">
 					<input type="radio" id="es-1" name="es" value="knapp">
 					Knapp
 				</label>
 			
-				<label for="es-2">
+				<label for="es-2" onclick="setSelectedRadio('SymbolQ', 'B')">
 					<input type="radio" id="es-2" name="es" value="skruvresistans">
 					Skruvresistans
 				</label>
 			
-				<label for="es-3">
+				<label for="es-3" onclick="setSelectedRadio('SymbolQ', 'C')">
 					<input type="radio" id="es-3" name="es" value="glödlampa">
 					Glödlampa
 				</label>
 
-				<label for="es-4">
+				<label for="es-4" onclick="setSelectedRadio('SymbolQ', 'D')">
 					<input type="radio" id="es-4" name="es" value="nödstopp">
 					Nödstopp
 				</label>
@@ -178,22 +170,22 @@
 					Fråga 3: Vilket alternativ är <strong><em>inte</em></strong> ett programmeringsspråk?
 				</label>
 							<!-- Input Type Radio Button -->
-				<label for="ps-1">
+				<label for="ps-1" onclick="setSelectedRadio('ProgrammingLanguageQ', 'A')">
 					<input type="radio" id="ps-1" name="ps" value="C++">
 					C++
 				</label>
 			
-				<label for="ps-2">
+				<label for="ps-2" onclick="setSelectedRadio('ProgrammingLanguageQ', 'B')">
 					<input type="radio" id="ps-2" name="ps" value="C#">
 					C#
 				</label>
 			
-				<label for="ps-3">
+				<label for="ps-3" onclick="setSelectedRadio('ProgrammingLanguageQ', 'C')">
 					<input type="radio" id="ps-3" name="ps" value="C-Shark">
 					C-Shark
 				</label>
 
-				<label for="ps-4">
+				<label for="ps-4" onclick="setSelectedRadio('ProgrammingLanguageQ', 'D')">
 					<input type="radio" id="ps-4" name="ps" value="C">
 					C
 				</label>
@@ -206,22 +198,22 @@
 					Fråga 4: Vilket alternativ är en "integer"?
 				</label>
 							<!-- Input Type Radio Button -->
-				<label for="int-1">
+				<label for="int-1" onclick="setSelectedRadio('IntegerQ', 'A')">
 					<input type="radio" id="int-1" name="int" value="C++">
 					9.2
 				</label>
 			
-				<label for="int-2">
+				<label for="int-2" onclick="setSelectedRadio('IntegerQ', 'B')">
 					<input type="radio" id="int-2" name="int" value="C#">
 					17
 				</label>
 			
-				<label for="int-3">
+				<label for="int-3" onclick="setSelectedRadio('IntegerQ', 'C')">
 					<input type="radio" id="int-3" name="int" value="C-Shark">
 					"xyz"
 				</label>
 
-				<label for="int-4">
+				<label for="int-4" onclick="setSelectedRadio('IntegerQ', 'D')">
 					<input type="radio" id="int-4" name="int" value="C">
 					π
 				</label>
@@ -237,22 +229,22 @@
 				<img src="images/screwheads4_v2.png" class="screwheads">
 			
 				<!-- Input Type Radio Button -->
-				<label for="sh-1">
+				<label for="sh-1" onclick="setSelectedRadio('ScrewheadQ', 'A')">
 					<input type="radio" id="sh-1" name="sh" value="n1">
 					A
 				</label>
 			
-				<label for="sh-2">
+				<label for="sh-2" onclick="setSelectedRadio('ScrewheadQ', 'B')">
 					<input type="radio" id="sh-2" name="sh" value="n2">
 					B
 				</label>
 			
-				<label for="sh-3">
+				<label for="sh-3" onclick="setSelectedRadio('ScrewheadQ', 'C')">
 					<input type="radio" id="sh-3" name="sh" value="n3">
 					C
 				</label>
 
-				<label for="sh-4">
+				<label for="sh-4" onclick="setSelectedRadio('ScrewheadQ', 'D')">
 					<input type="radio" id="sh-4" name="sh" value="n4">
 					D
 				</label>
@@ -266,22 +258,22 @@
 				</label>
 
 				<!-- Input Type Radio Button -->
-				<label for="GMP-1">
+				<label for="GMP-1" onclick="setSelectedRadio('GMPQ', 'A')">
 					<input type="radio" id="GMP-1" name="GMP" value="GMP1">
 					Gross Margin Profit
 				</label>
 			
-				<label for="GMP-2">
+				<label for="GMP-2" onclick="setSelectedRadio('GMPQ', 'B')">
 					<input type="radio" id="GMP-2" name="GMP" value="GMP2">
 					Good Manufacturing Process
 				</label>
 			
-				<label for="GMP-3">
+				<label for="GMP-3" onclick="setSelectedRadio('GMPQ', 'C')">
 					<input type="radio" id="GMP-3" name="GMP" value="GMP3">
 					Good Manufacturing Practice
 				</label>
 
-				<label for="GMP-4">
+				<label for="GMP-4" onclick="setSelectedRadio('GMPQ', 'D')">
 					<input type="radio" id="GMP-4" name="GMP" value="GMP4">
 					General Medical Procedure
 				</label>
@@ -297,22 +289,22 @@
 				<img src="images/kondensator_rot.png" class="kondensator">
 			
 				<!-- Input Type Radio Button -->
-				<label for="kondensator-1">
+				<label for="kondensator-1" onclick="setSelectedRadio('KapacitorQ', 'A')">
 					<input type="radio" id="kondensator-1" name="kondensator" value="n1">
 					Henry
 				</label>
 			
-				<label for="kondensator-2">
+				<label for="kondensator-2" onclick="setSelectedRadio('KapacitorQ', 'B')">
 					<input type="radio" id="kondensator-2" name="kondensator" value="n2">
 					Farad
 				</label>
 			
-				<label for="kondensator-3">
+				<label for="kondensator-3" onclick="setSelectedRadio('KapacitorQ', 'C')">
 					<input type="radio" id="kondensator-3" name="kondensator" value="n3">
 					Ohm
 				</label>
 
-				<label for="kondensator-4">
+				<label for="kondensator-4" onclick="setSelectedRadio('KapacitorQ', 'D')">
 					<input type="radio" id="kondensator-4" name="kondensator" value="n4">
 					Joule
 				</label>
@@ -322,26 +314,26 @@
 		<div class="form-control">
 			<form>
 				<label class="question-label">
-					Fråga 8: Vad kallas metoden som används av Cytiva, en av de viktigaste kunderna för Prevas i Uppsala, för att skilja olika molekyler i en blandning från varandra?
+					Fråga 8: Cytiva är en en av Prevas största kunder i Uppsala. Cytiva jobbar mycket med en metod som renar fram specifika beståndsdelar (exempelvis protein eller antikroppar) från en lösning. Vad kallas metoden?
 				</label>
 			
 				<!-- Input Type Radio Button -->
-				<label for="kg-1">
+				<label for="kg-1" onclick="setSelectedRadio('CytivaQ', 'A')">
 					<input type="radio" id="kg-1" name="kg" value="n1">
 					Kromatografi
 				</label>
 			
-				<label for="kg-2">
+				<label for="kg-2" onclick="setSelectedRadio('CytivaQ', 'B')">
 					<input type="radio" id="kg-2" name="kg" value="n2">
 					Filtrering
 				</label>
 			
-				<label for="kg-3">
+				<label for="kg-3" onclick="setSelectedRadio('CytivaQ', 'C')">
 					<input type="radio" id="kg-3" name="kg" value="n3">
 					Spektroskopi
 				</label>
 
-				<label for="kg-4">
+				<label for="kg-4" onclick="setSelectedRadio('CytivaQ', 'D')">
 					<input type="radio" id="kg-4" name="kg" value="n4">
 					Sublimation
 				</label>
@@ -355,37 +347,40 @@
 				</label>
 			
 				<!-- Input Type Radio Button -->
-				<label for="gf-1">
+				<label for="gf-1" onclick="setSelectedRadio('gensaxQ', 'A')">
 					<input type="radio" id="gf-1" name="gf" value="n1">
 					RNA-sekvensering
 				</label>
 			
-				<label for="gf-2">
+				<label for="gf-2" onclick="setSelectedRadio('gensaxQ', 'B')">
 					<input type="radio" id="gf-2" name="gf" value="n2">
 					GMO
 				</label>
 			
-				<label for="gf-3">
+				<label for="gf-3" onclick="setSelectedRadio('gensaxQ', 'C')">
 					<input type="radio" id="gf-3" name="gf" value="n3">
 					CRISPR
 				</label>
 
-				<label for="gf-4">
+				<label for="gf-4" onclick="setSelectedRadio('gensaxQ', 'D')">
 					<input type="radio" id="gf-4" name="gf" value="n4">
 					PCR
 				</label>
 				
 			</form>
 		</div>
-		<button type="button" onclick="submitForm()">Submit</button>
+		<div class="form-control">
+			<form> 
+				<label>
+					Klar? Tryck nedan för att skicka in! 
+				</label>
+		
+				<button type="button" id="myButton" onclick="submitForm()">Skicka</button>
+			</form>
+		</div>
 
 	</form>
 
-	<script>
-		function submitForm() {
-			document.getElementById('form').submit();
-		}
-	</script>
-
+	<script src="code.js"></script>
 
 </body>
