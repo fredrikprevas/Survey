@@ -94,7 +94,7 @@ h1 {
     margin: auto;
 } 
 
-.form-control button {
+button {
     background-color: #21c244;
     border: 2px solid #777;
     border-radius: 10px;
