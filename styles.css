@@ -2,9 +2,10 @@
 Font, Alignment */ 
 body {
     background-color: #54BFD1;
-    font-family: "Nunito Sans";
+    font-family: "Nunito Sans", sans-serif;
     text-align: center;
     font-size: 16px;
+    font-weight: 300;
 }
 /* Styling the Form (Color, Padding, Shadow) */
 form {
