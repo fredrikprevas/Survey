@@ -46,11 +46,9 @@ select, textarea */
     display: block;
     width: 95%;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.form-control select {
-    width: 100%;
-}
 
 /* Styling form-control Radio 
 button and Checkbox */
@@ -150,3 +148,16 @@ span {
     color: #54BFD1; /* Blue */
   }
 
+  .form-control select {
+    color: black;
+}
+
+.message, .timer-message {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.timer-message {
+    white-space: nowrap;
+}
