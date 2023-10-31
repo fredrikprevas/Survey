@@ -32,7 +32,7 @@ function LoadingPopup() {
     var popup = document.createElement("div");
     popup.classList.add("popup"); // Add the "popup" class
 
-    popup.style.backgroundImage = 'url("images/hand3.jpg")';
+    popup.style.backgroundImage = 'url("images/hand2.png")';
     popup.style.backgroundSize = 'cover';
 
     var loader = document.createElement("div");
@@ -43,37 +43,7 @@ function LoadingPopup() {
     document.body.appendChild(popup);
 }
 
-
-
-
 function showSuccessPopup() {
-  var popup = document.createElement("div");
-  popup.classList.add("popup");
-
-  popup.style.backgroundImage = 'url("images/bild2.jpg")';
-  popup.style.backgroundSize = 'cover';
-
-  var topContent = document.createElement("div");
-  topContent.classList.add("top-content");
-
-  var message = document.createElement("div");
-  message.innerText = "Tack för ditt svar! \n Lär dig mer på www.Prevas.se";
-  message.classList.add("message");
-
-  var timerMessage = document.createElement("div");
-  timerMessage.id = "timerMessage";
-  timerMessage.classList.add("timer-message");
-
-  topContent.appendChild(message);
-  topContent.appendChild(timerMessage);
-
-  popup.appendChild(topContent);
-
-  document.body.appendChild(popup);
-
-  // Position elements
-  topContent.style.position = "absolute";
-  topContent.style.top = "10px";
-  topContent.style.left = "50%";
-  topContent.style.transform = "translateX(-50%)";
+  window.location.href = "tack.html";
 }
+

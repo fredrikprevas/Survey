@@ -23,6 +23,12 @@ form {
     text-align: left;
     margin-bottom: 25px;
 }
+
+.custom-form-control {
+    padding: 0;
+    margin: 0;
+}
+
 /* Styling form-control Label */ 
 .form-control label {
     display: block;
@@ -107,11 +113,11 @@ button {
 }
 
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
+    border: 16px solid transparent; /* Light grey */
     border-top: 16px solid #54BFD1; /* Blue */
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     margin: auto;
     animation: spin 2s linear infinite;
 }
@@ -160,4 +166,8 @@ span {
 
 .timer-message {
     white-space: nowrap;
+}
+
+.ty-label {
+    text-align: center !important; /* Center-align the text */
 }
