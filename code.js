@@ -32,7 +32,7 @@ function LoadingPopup() {
     var popup = document.createElement("div");
     popup.classList.add("popup"); // Add the "popup" class
 
-    popup.style.backgroundImage = 'url("images/hand_downscale.png")';
+    popup.style.backgroundImage = 'url("images/hand_downscale.jpg")';
     popup.style.backgroundSize = 'cover';
 
     var loader = document.createElement("div");

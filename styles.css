@@ -55,15 +55,10 @@ select, textarea */
     box-sizing: border-box;
 }
 
-
-/* Styling form-control Radio 
-button and Checkbox */
 .form-control input[type="radio"] {
     display: inline-block;
     width: auto;
 }
-/* Styling Button */
-
 h1 {
     color: #4A4949;
   }
@@ -100,11 +95,11 @@ h1 {
 } 
 
 button {
-    background-color: #21c244;
+    color: black; /* Add this line to set text color to black */
+    background-color: #54BFD1;
     border: 1px solid #4A4949;
     border-radius: 10px;
     font-family: inherit;
-    box-shadow: 1px 1px 1px #4A4949;
     font-size: 21px;
     display: block;
     margin: auto;
