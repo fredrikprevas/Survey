@@ -1,0 +1,168 @@
+/* Styling the Body element i.e. Color, 
+Font, Alignment */ 
+body {
+    background-color: #54BFD1;
+    font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px 15px;
+    box-shadow: 3px 7px 15px #4A4949;
+    border-radius: 10px;
+    
+}
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.custom-form-control {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling form-control Label */ 
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.question-label {
+    padding-bottom: 20px; /* Adjust this value to increase the margin */
+    font-size: 18px;
+}
+
+/* Styling form-control input, 
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-control input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+h1 {
+    color: #4A4949;
+  }
+
+.electricalsymbol {
+    width: 150px; /* Set the desired width */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto;
+}  
+
+.screwheads { 
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    margin: auto;
+} 
+
+.kondensator {
+    width: 100; 
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    margin: auto;
+} 
+
+.prevashello {
+    width: 300px; 
+    max-width: 500px;
+    height: auto; 
+    display: block;
+    margin: auto;
+} 
+
+button {
+    color: black; /* Add this line to set text color to black */
+    background-color: #54BFD1;
+    border: 1px solid #4A4949;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 21px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+.loader {
+    border: 16px solid transparent; /* Light grey */
+    border-top: 16px solid #54BFD1; /* Blue */
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    animation: spin 2s linear infinite;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 300px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    content: "\2713";
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 48px;
+    color: #54BFD1; /* Blue */
+  }
+
+  .form-control select {
+    color: black;
+}
+
+.message, .timer-message {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.timer-message {
+    white-space: nowrap;
+}
+
+.ty-label {
+    text-align: center !important; /* Center-align the text */
+}

@@ -1,230 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible"
-		content="IE=edge">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light only">
+	<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico?">
+	<link rel="stylesheet" href="styles.css">
 	<title>
-		Build a Survey Form using HTML and CSS
+		Prevas På Utnarm
 	</title>
-	<style>
-		/* Styling the Body element i.e. Color, 
-		Font, Alignment */ 
-		body {
-			background-color: #05c46b;
-			font-family: Verdana;
-			text-align: center;
-		}
-		/* Styling the Form (Color, Padding, Shadow) */
-		form {
-			background-color: #fff;
-			max-width: 500px;
-			margin: 50px auto;
-			padding: 30px 20px;
-			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-		}
-		/* Styling form-control Class */
-		.form-control {
-			text-align: left;
-			margin-bottom: 25px;
-		}
-		/* Styling form-control Label */ 
-		.form-control label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		/* Styling form-control input, 
-		select, textarea */
-		.form-control input,
-		.form-control select,
-		.form-control textarea {
-			border: 1px solid #777;
-			border-radius: 2px;
-			font-family: inherit;
-			padding: 10px;
-			display: block;
-			width: 95%;
-		}
-		/* Styling form-control Radio 
-		button and Checkbox */
-		.form-control input[type="radio"],
-		.form-control input[type="checkbox"] {
-			display: inline-block;
-			width: auto;
-		}
-		/* Styling Button */
-		button {
-			background-color: #05c46b;
-			border: 1px solid #777;
-			border-radius: 2px;
-			font-family: inherit;
-			font-size: 21px;
-			display: block;
-			width: 100%;
-			margin-top: 50px;
-			margin-bottom: 20px;
-		}
-	</style>
+
 </head>
+
+
 <body>
-	<h1>GeeksforGeeks Survey Form</h1>
-	<!-- Create Form -->
-	<form id="form">
-		<!-- Details -->
+	<form method = "post" action="https://script.google.com/macros/s/AKfycbz1FSrr05jRQQQANoM86jomuoPAix-JcnqgRhIXo_x5n4oOCz-_R2pWOJM0Api34XsL/exec" id="form" name="contact-form">
+
+		<!-- Här samlas alla valda svar från frågorna i hiddens. blev fel annars då det är forms i formen. -->
+		<input type="hidden" id="3DPrinterQ" name="Fråga 1" value = "N/A">
+		<input type="hidden" id="SymbolQ" name="Fråga 2" value = "N/A">
+		<input type="hidden" id="ProgrammingLanguageQ" name="Fråga 3" value = "N/A">
+		<input type="hidden" id="IntegerQ" name="Fråga 4" value = "N/A">
+		<input type="hidden" id="ScrewheadQ" name="Fråga 5" value = "N/A">
+		<input type="hidden" id="GMPQ" name="Fråga 6" value = "N/A">
+		<input type="hidden" id="KapacitorQ" name="Fråga 7" value = "N/A">
+		<input type="hidden" id="CytivaQ" name="Fråga 8" value = "N/A">
+		<input type="hidden" id="gensaxQ" name="Fråga 9" value = "N/A">
+
 		<div class="form-control">
-			<label for="name" id="label-name">
-				Name
-			</label>
-			<!-- Input Type Text -->
-			<input type="text"
-				id="name"
-				placeholder="Enter your name" />
+			<img src="images/prevashello.png" class="prevashello">
 		</div>
+		
 		<div class="form-control">
-			<label for="email" id="label-email">
-				Email
-			</label>
-			<!-- Input Type Email-->
-			<input type="email"
-				id="email"
-				placeholder="Enter your email" />
+				<label for="name" id="label-name">
+					Namn
+				</label>
+				<input type="text"
+					id="name"
+					name ="Namn"
+					placeholder="Mata in namn" />
 		</div>
+
 		<div class="form-control">
-			<label for="age" id="label-age">
-				Age
-			</label>
-			<!-- Input Type Text -->
-			<input type="text"
-				id="age"
-				placeholder="Enter your age" />
+				<label for="email" id="label-email" >
+					Email
+				</label>
+				<input type="email"
+					id="email"
+					placeholder="Mata in email"
+					name = "Email" />
 		</div>
+
 		<div class="form-control">
-			<label for="role" id="label-role">
-				Which option best describes you?
+			<label for="mobile" id="label-mobile">
+				Telefonnummer
 			</label>
+			<input type="tel"
+				id="mobile"
+				name="Telefonnummer"
+				placeholder="Mata in telefonnummer" />
+		</div>
+
+		<div class="form-control">
+            <label for="Utbildning" id="Utbildning-linje">
+                Vilken linje studerar du?
+            </label>
+            
+            <!-- Dropdown options -->
+            <select name="Utbildning" id="Utbildning">
+				<option value="N/A">Välj linje</option>
+                <option value="Teknisk fysik">Teknisk fysik</option>
+                <option value="Teknisk fysik med materialvetenskap">Teknisk fysik med materialvetenskap</option>
+                <option value="System i teknik och samhälle">System i teknik och samhälle</option>
+                <option value="Molekylär bioteknik">Molekylär bioteknik</option>
+				<option value="Miljö- och vattenteknik">Miljö- och vattenteknik</option>
+				<option value="Kemiteknik">Kemiteknik</option>
+				<option value="Informationsteknologi">Informationsteknologi</option>
+				<option value="Industriell ekonomi">Industriell ekonomi</option>
+				<option value="Energisystem">Energisystem</option>
+				<option value="Elektroteknik">Elektroteknik</option>
+				<option value="Annan">Annan</option>
+            </select>
+        </div>
+		
+		<div class="form-control">
+			<form >
+
+				<label for="År" id="label-År">
+					Vilket år studerar du?
+				</label>
+				<select name="År" id="role">
+					<option value="N/A">Välj år</option>
+					<option value="1">År 1</option>
+					<option value="2">År 2</option>
+					<option value="3">År 3</option>
+					<option value="4">År 4</option>
+					<option value="5">År 5</option>
+				</select>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 1: Vad är namnet på den välkända modellen som är speciellt framtagen för att testa och bedöma 3D-skrivares prestanda och förmåga? (<em>psst, du hittar en i montern</em>)
+				</label>
+
+				<!-- Input Type Radio Button -->
+				<label for="printer-1" onclick="setSelectedRadio('3DPrinterQ', 'A')">
+					<input type="radio" id="printer-1" name="3DPrinter" value="3DBenchy">
+					3DBenchy
+				</label>
 			
-			<!-- Dropdown options -->
-			<select name="role" id="role">
-				<option value="student">Student</option>
-				<option value="intern">Intern</option>
-				<option value="professional">
-					Professional
-				</option>
-				<option value="other">Other</option>
-			</select>
+				<label for="printer-2" onclick="setSelectedRadio('3DPrinterQ', 'B')">
+					<input type="radio" id="printer-2" name="3DPrinter" value="3DBoaty">
+					3DBoaty
+				</label>
+			
+				<label for="printer-3" onclick="setSelectedRadio('3DPrinterQ', 'C')">
+					<input type="radio" id="printer-3" name="3DPrinter" value="3DDucky">
+					3DDucky
+				</label>
+
+				<label for="printer-4" onclick="setSelectedRadio('3DPrinterQ', 'D')">
+					<input type="radio" id="printer-4" name="3DPrinter" value="3DRocky">
+					3DRocky
+				</label>
+			</form>
+		</div>
+
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 2: Vilken elektrisk komponent symboliserar denna symbol?
+				</label>
+
+				<img src="images/electricalsymbol.png" class="electricalsymbol">
+			
+				<!-- Input Type Radio Button -->
+				<label for="es-1" onclick="setSelectedRadio('SymbolQ', 'A')">
+					<input type="radio" id="es-1" name="es" value="knapp">
+					Knapp
+				</label>
+			
+				<label for="es-2" onclick="setSelectedRadio('SymbolQ', 'B')">
+					<input type="radio" id="es-2" name="es" value="skruvresistans">
+					Skruvresistans
+				</label>
+			
+				<label for="es-3" onclick="setSelectedRadio('SymbolQ', 'C')">
+					<input type="radio" id="es-3" name="es" value="glödlampa">
+					Glödlampa
+				</label>
+
+				<label for="es-4" onclick="setSelectedRadio('SymbolQ', 'D')">
+					<input type="radio" id="es-4" name="es" value="nödstopp">
+					Nödstopp
+				</label>
+			</form>
+
+
+		</div>
+
+		<div class="form-control">
+			<form> 
+				<label class="question-label">
+					Fråga 3: Vilket alternativ är <strong><em>inte</em></strong> ett programmeringsspråk?
+				</label>
+							<!-- Input Type Radio Button -->
+				<label for="ps-1" onclick="setSelectedRadio('ProgrammingLanguageQ', 'A')">
+					<input type="radio" id="ps-1" name="ps" value="C++">
+					C++
+				</label>
+			
+				<label for="ps-2" onclick="setSelectedRadio('ProgrammingLanguageQ', 'B')">
+					<input type="radio" id="ps-2" name="ps" value="C#">
+					C#
+				</label>
+			
+				<label for="ps-3" onclick="setSelectedRadio('ProgrammingLanguageQ', 'C')">
+					<input type="radio" id="ps-3" name="ps" value="C-Shark">
+					C-Shark
+				</label>
+
+				<label for="ps-4" onclick="setSelectedRadio('ProgrammingLanguageQ', 'D')">
+					<input type="radio" id="ps-4" name="ps" value="C">
+					C
+				</label>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 4: Vilket alternativ är en "integer"?
+				</label>
+							<!-- Input Type Radio Button -->
+				<label for="int-1" onclick="setSelectedRadio('IntegerQ', 'A')">
+					<input type="radio" id="int-1" name="int" value="C++">
+					9.2
+				</label>
+			
+				<label for="int-2" onclick="setSelectedRadio('IntegerQ', 'B')">
+					<input type="radio" id="int-2" name="int" value="C#">
+					17
+				</label>
+			
+				<label for="int-3" onclick="setSelectedRadio('IntegerQ', 'C')">
+					<input type="radio" id="int-3" name="int" value="C-Shark">
+					"xyz"
+				</label>
+
+				<label for="int-4" onclick="setSelectedRadio('IntegerQ', 'D')">
+					<input type="radio" id="int-4" name="int" value="C">
+					π
+				</label>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 5: Vilket av följande skruvhuvuden heter Phillips?
+				</label>
+
+				<img src="images/screwheads4_v2.png" class="screwheads">
+			
+				<!-- Input Type Radio Button -->
+				<label for="sh-1" onclick="setSelectedRadio('ScrewheadQ', 'A')">
+					<input type="radio" id="sh-1" name="sh" value="n1">
+					A
+				</label>
+			
+				<label for="sh-2" onclick="setSelectedRadio('ScrewheadQ', 'B')">
+					<input type="radio" id="sh-2" name="sh" value="n2">
+					B
+				</label>
+			
+				<label for="sh-3" onclick="setSelectedRadio('ScrewheadQ', 'C')">
+					<input type="radio" id="sh-3" name="sh" value="n3">
+					C
+				</label>
+
+				<label for="sh-4" onclick="setSelectedRadio('ScrewheadQ', 'D')">
+					<input type="radio" id="sh-4" name="sh" value="n4">
+					D
+				</label>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 6: GMP är ett återkommande begrepp inom läkemedelsindustrin. Vad står förkortningen för?
+				</label>
+
+				<!-- Input Type Radio Button -->
+				<label for="GMP-1" onclick="setSelectedRadio('GMPQ', 'A')">
+					<input type="radio" id="GMP-1" name="GMP" value="GMP1">
+					Gross Margin Profit
+				</label>
+			
+				<label for="GMP-2" onclick="setSelectedRadio('GMPQ', 'B')">
+					<input type="radio" id="GMP-2" name="GMP" value="GMP2">
+					Good Manufacturing Process
+				</label>
+			
+				<label for="GMP-3" onclick="setSelectedRadio('GMPQ', 'C')">
+					<input type="radio" id="GMP-3" name="GMP" value="GMP3">
+					Good Manufacturing Practice
+				</label>
+
+				<label for="GMP-4" onclick="setSelectedRadio('GMPQ', 'D')">
+					<input type="radio" id="GMP-4" name="GMP" value="GMP4">
+					General Medical Procedure
+				</label>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 7: Nedan syns en kondensator, som karaktäriseras av sin kapacitans. Men i vilken enhet mäts kapacitans?
+				</label>
+
+				<img src="images/kondensator_rot.png" class="kondensator">
+			
+				<!-- Input Type Radio Button -->
+				<label for="kondensator-1" onclick="setSelectedRadio('KapacitorQ', 'A')">
+					<input type="radio" id="kondensator-1" name="kondensator" value="n1">
+					Henry
+				</label>
+			
+				<label for="kondensator-2" onclick="setSelectedRadio('KapacitorQ', 'B')">
+					<input type="radio" id="kondensator-2" name="kondensator" value="n2">
+					Farad
+				</label>
+			
+				<label for="kondensator-3" onclick="setSelectedRadio('KapacitorQ', 'C')">
+					<input type="radio" id="kondensator-3" name="kondensator" value="n3">
+					Ohm
+				</label>
+
+				<label for="kondensator-4" onclick="setSelectedRadio('KapacitorQ', 'D')">
+					<input type="radio" id="kondensator-4" name="kondensator" value="n4">
+					Joule
+				</label>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 8: Cytiva är en en av Prevas största kunder i Uppsala. Cytiva jobbar mycket med en metod som renar fram specifika beståndsdelar (exempelvis protein eller antikroppar) från en lösning. Vad kallas metoden?
+				</label>
+			
+				<!-- Input Type Radio Button -->
+				<label for="kg-1" onclick="setSelectedRadio('CytivaQ', 'A')">
+					<input type="radio" id="kg-1" name="kg" value="n1">
+					Kromatografi
+				</label>
+			
+				<label for="kg-2" onclick="setSelectedRadio('CytivaQ', 'B')">
+					<input type="radio" id="kg-2" name="kg" value="n2">
+					Filtrering
+				</label>
+			
+				<label for="kg-3" onclick="setSelectedRadio('CytivaQ', 'C')">
+					<input type="radio" id="kg-3" name="kg" value="n3">
+					Spektroskopi
+				</label>
+
+				<label for="kg-4" onclick="setSelectedRadio('CytivaQ', 'D')">
+					<input type="radio" id="kg-4" name="kg" value="n4">
+					Sublimation
+				</label>
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form>
+				<label class="question-label">
+					Fråga 9: Vilken teknik används för att göra precisa genförändringar hos organismer? (<em>psst, tekniken fick nobelpriset i kemi 2020</em>)
+				</label>
+			
+				<!-- Input Type Radio Button -->
+				<label for="gf-1" onclick="setSelectedRadio('gensaxQ', 'A')">
+					<input type="radio" id="gf-1" name="gf" value="n1">
+					RNA-sekvensering
+				</label>
+			
+				<label for="gf-2" onclick="setSelectedRadio('gensaxQ', 'B')">
+					<input type="radio" id="gf-2" name="gf" value="n2">
+					GMO
+				</label>
+			
+				<label for="gf-3" onclick="setSelectedRadio('gensaxQ', 'C')">
+					<input type="radio" id="gf-3" name="gf" value="n3">
+					CRISPR
+				</label>
+
+				<label for="gf-4" onclick="setSelectedRadio('gensaxQ', 'D')">
+					<input type="radio" id="gf-4" name="gf" value="n4">
+					PCR
+				</label>
+				
+			</form>
 		</div>
 		<div class="form-control">
-			<label>
-				Would you recommend GeeksforGeeks 
-				to a friend?
-			</label>
-			<!-- Input Type Radio Button -->
-			<label for="recommed-1">
-				<input type="radio"
-					id="recommed-1"
-					name="recommed">Yes</input>
-			</label>
-			<label for="recommed-2">
-				<input type="radio"
-					id="recommed-2"
-					name="recommed">No</input>
-			</label>
-			<label for="recommed-3">
-				<input type="radio"
-					id="recommed-3"
-					name="recommed">Maybe</input>
-			</label>
+			<form> 
+				<label class = "ty-label">
+					Klar? Tryck nedan för att skicka in! 
+				</label>
+		
+				<button type="button" id="myButton" onclick="submitForm()">Skicka</button>
+				
+			</form>
 		</div>
-		<div class="form-control">
-			<label>Languages and Frameworks known 
-				<small>(Check all that apply)</small>
-			</label>
-			<!-- Input Type Checkbox -->
-			<label for="inp-1">
-				<input type="checkbox"
-					name="inp">C</input></label>
-			<label for="inp-2">
-				<input type="checkbox"
-					name="inp">C++</input></label>
-			<label for="inp-3">
-				<input type="checkbox"
-					name="inp">C#</input></label>
-			<label for="inp-4">
-				<input type="checkbox"
-					name="inp">Java</input></label>
-			<label for="inp-5">
-				<input type="checkbox"
-					name="inp">Python</input></label>
-			<label for="inp-6">
-				<input type="checkbox"
-					name="inp">JavaScript</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">React</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Angular</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Django</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Spring</input></label>
-		</div>
-		<div class="form-control">
-			<label for="comment">
-				Any comments or suggestions
-			</label>
-			<!-- multi-line text input control -->
-			<textarea name="comment" id="comment"
-				placeholder="Enter your comment here">
-			</textarea>
-		</div>
-		<!-- Multi-line Text Input Control -->
-		<button type="submit" value="submit">
-			Submit
-		</button>
+
+
 	</form>
 
+	<script src="code.js"></script>
 
-	<script>
-		document.getElementById('form').addEventListener('submit', function(event) {
-			// Prevent the default form submission behavior
-			event.preventDefault();
-
-			// Retrieve the values of the form elements
-			var name = document.getElementById('name').value;
-			var email = document.getElementById('email').value;
-			var age = document.getElementById('age').value;
-			var role = document.getElementById('role').value;
-
-			// Get the selected recommendation
-			var recommendation = document.querySelector('input[name="recommed"]:checked').value;
-
-			// Get the selected languages/frameworks
-			var checkboxes = document.getElementsByName('inp');
-			var languages = [];
-			for (var i = 0; i < checkboxes.length; i++) {
-				if (checkboxes[i].checked) {
-					languages.push(checkboxes[i].value);
-				}
-			}
-
-			var comment = document.getElementById('comment').value;
-
-			// Optionally, you can store these values or send them to a server
-			console.log('Name:', name);
-			console.log('Email:', email);
-			console.log('Age:', age);
-			console.log('Role:', role);
-			console.log('Recommendation:', recommendation);
-			console.log('Languages:', languages);
-			console.log('Comment:', comment);
-		});
-	</script>
 </body>
-</html>
-</body>
-</html>
