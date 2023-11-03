@@ -7,7 +7,8 @@ function submitForm() {
   var inputElement = document.getElementById('Utslagid');
   var hiddenElement = document.getElementById('Utslag');
   var inputValue = inputElement.value;
-  hiddenElement.value = inputValue;
+  var replacedValue = inputValue.replace(/\./g, ',');
+  hiddenElement.value = replacedValue;
 
 
   document.getElementById('myButton').disabled = true;
